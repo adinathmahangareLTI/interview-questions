@@ -7,11 +7,9 @@
   - Git rebase moves the commits of one branch to another, creating a linear history. Cleaner way of combining histories, used with remote and local repos.
 
 3. what the different git branching methods?
-  - git flow
-  - github flow
-  - gitlab flow
-  - feature branch flow
-  - trunk based development
+  - git flow: two long lived branches: main and Developement + feature, release and hotflix
+  - feature branch flow: diff branch for feature : main+feature
+  - trunk based development: main branch only
 
 4. What is continuous integration?
   - developers frequently merge their code changes into a shared repository
@@ -167,4 +165,25 @@
   - 34 worldwide regions
 
 21. what is difference between maxSurge and maxUnavailable in deployment.yml?
-  - 
+  - maxSurge and maxUnavailable are parameters used to control the rolling update process of your application.
+  - maxSurge: specifies the maximum number of additional pods that can be created beyond the desired number of pods during update
+  - Ex. If you set maxSurge value 1, kubernetes will create one extra pod during update process
+  - maxUnavailable: parameter defines the maximum number of pods that can be unavailable during update process.
+  - Ex. if you set maxUnavailable to 1, kubernetes will ensures that at least one less pod than the desired number is always running.
+
+22. Difference between git install and git reset
+  - yum install git: used to install git on local machine
+  - git reset:
+  
+23. What if jenkins pipeline crashed? what is the alternative approach
+  - use suitable instance_type like t2.medium
+  - have backup jenkins server
+  - blue-green model: creates new cluster when one is down
+  - Review the Jenkins logs to identify the cause of the crash.
+  - Try restarting jenkins engine
+  - keep alternative CI/CD tool like Gitlab CI
+
+24. what is RBAC?
+  - Role based Access Control
+
+25. 
